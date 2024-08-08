@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Application Management System
 
-## Getting Started
+This project is a comprehensive application management system built within the Recruiter Portal, allowing recruiters to efficiently track and manage job applications. The system is developed using Next.js for both frontend and backend, with MongoDB as the database.
 
-First, run the development server:
+## Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+application-management-system/
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js              # MongoDB connection setup
+│   ├── controllers/
+│   │   └── applicationController.js   # Handles application-related logic
+│   ├── models/
+│   │   └── Application.js     # Mongoose schema for the Application model
+│   ├── routes/
+│   │   └── applicationRoutes.js  # Routes for application API endpoints
+│   ├── middlewares/
+│   │   └── authMiddleware.js  # Authentication middleware for route protection
+│   ├── utils/
+│   │   └── fileUpload.js      # Utility for handling file uploads (e.g., resumes)
+│   ├── app.js                 # Entry point for the backend server
+│   └── package.json           # Backend dependencies and scripts
+│
+├── public/
+│   └── favicon.ico            # Favicon for the application
+│
+├── app/
+│   ├── layout.js              # Main layout component for the frontend
+│   ├── page.js                # Main entry point for the frontend
+│   ├── applications/          # Application-related pages
+│   │   ├── index.js           # Page to list all applications
+│   │   └── [id].js            # Page to view application details by ID
+│
+├── components/
+│   ├── ApplicationList.js     # Component for displaying the list of applications
+│   ├── ApplicationDetail.js   # Component for displaying application details
+│   ├── SearchFilter.js        # Component for searching and filtering applications
+│
+├── styles/
+│   └── globals.css            # Global styles using Tailwind CSS
+│
+├── .env                       # Environment variables (e.g., database connection string)
+├── package.json               # Frontend dependencies and scripts
+└── tailwind.config.js         # Tailwind CSS configuration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Prerequisites
 
-## Learn More
+- Node.js (v14 or above)
+- MongoDB
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/yourusername/application-management-system.git
+   cd application-management-system
 
-## Deploy on Vercel
+2. Install dependencies for both backend and frontend:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+# Install backend dependencies
+cd backend
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Install frontend dependencies
+cd ../
+npm install
