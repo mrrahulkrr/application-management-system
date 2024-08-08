@@ -1,7 +1,9 @@
 # Application Management System
 
 This project is a prototype application management system built as the Recruiter Portal, allowing recruiters to efficiently track and manage job applications. The system is developed using Next.js for both frontend and backend, with MongoDB as the database.
-**Note:** This project is still a work in progress. I am actively developing and improving features.
+
+
+- **Note:** This project is still a work in progress. I am actively developing and improving features.
 
 ## Project Structure
 
