@@ -1,6 +1,7 @@
 # Application Management System
 
-This project is a comprehensive application management system built within the Recruiter Portal, allowing recruiters to efficiently track and manage job applications. The system is developed using Next.js for both frontend and backend, with MongoDB as the database.
+This project is a prototype application management system built as the Recruiter Portal, allowing recruiters to efficiently track and manage job applications. The system is developed using Next.js for both frontend and backend, with MongoDB as the database.
+**Note:** This project is still a work in progress. I am actively developing and improving features.
 
 ## Project Structure
 
@@ -64,10 +65,24 @@ application-management-system/
 2. Install dependencies for both backend and frontend:
 
   ```bash
-# Install backend dependencies
-cd backend
-npm install
+   # Install backend dependencies
+   cd backend
+   npm install
+   
+   # Install frontend dependencies
+   cd ../
+   npm install
 
-# Install frontend dependencies
-cd ../
-npm install
+3. Create a .env file in the root directory and add your environment variables:
+   ```bash
+      MONGODB_URI=your_mongodb_connection_string
+      JWT_SECRET=your_jwt_secret
+
+4. Run the development server:
+   ```bash
+   # Start the backend server
+   npm run server
+   
+   # Start the frontend server
+   cd ../
+   npm run dev
